@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Effecte SA — Industrial Software, Built to Ship</title>
+<meta name="description" content="Effecte SA builds focused software products for industrial operations: RapidMech, Lisca and Lead Radar.">
+<style>
+  :root{
+    --bg:#121519;
+    --bg-raised:#171B21;
+    --line:#2A313B;
+    --text:#E5E7EB;
+    --text-dim:#8B95A3;
+    --accent-rm:#F59E0B;
+    --accent-li:#3B82F6;
+    --accent-lr:#10B981;
+    --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* fine grid texture */
+  .grid-bg{position:fixed;inset:0;pointer-events:none;z-index:0;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:64px 64px;opacity:.14}
+  main,header,footer{position:relative;z-index:1}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(18,21,25,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.04em}
+  .brand svg{width:32px;height:32px}
+  .nav-links{display:flex;gap:28px;font-size:14px;color:var(--text-dim)}
+  .nav-links a:hover{color:var(--text)}
+
+  /* hero */
+  .hero{padding:110px 0 90px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:20px}
+  .kicker::before{content:"";display:inline-block;width:28px;height:1px;background:var(--accent-lr);vertical-align:middle;margin-right:12px}
+  h1{font-size:clamp(34px,5.5vw,58px);line-height:1.12;font-weight:800;letter-spacing:-.02em;max-width:760px}
+  h1 .dim{color:var(--text-dim)}
+  .hero p{margin-top:24px;max-width:560px;color:var(--text-dim);font-size:18px}
+  .hero-cta{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 26px;border-radius:8px;font-size:15px;font-weight:600;border:1px solid var(--line);transition:.15s}
+  .btn-primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+  .btn-primary:hover{opacity:.85}
+  .btn-ghost:hover{border-color:var(--text-dim)}
+
+  /* section headers */
+  section{padding:90px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:clamp(24px,3.4vw,34px);font-weight:750;letter-spacing:-.01em;margin-bottom:12px}
+  .sub{color:var(--text-dim);max-width:600px;margin-bottom:48px}
+
+  /* product cards */
+  .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+  .card{background:var(--bg-raised);border:1px solid var(--line);border-radius:14px;padding:32px 28px;display:flex;flex-direction:column;transition:border-color .2s}
+  .card:hover{border-color:#3d4654}
+  .card svg{width:56px;height:56px;margin-bottom:22px}
+  .card h3{font-size:20px;font-weight:700;display:flex;align-items:center;gap:10px}
+  .tag{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:1px solid var(--line);color:var(--text-dim)}
+  .card .domain{font-family:var(--mono);font-size:12px;margin-top:6px}
+  .card p{color:var(--text-dim);font-size:15px;margin-top:14px;flex:1}
+  .card .cta{margin-top:24px;font-size:14px;font-weight:600;font-family:var(--mono)}
+  .rm .domain,.rm .cta{color:var(--accent-rm)}
+  .li .domain,.li .cta{color:var(--accent-li)}
+  .lr .domain,.lr .cta{color:var(--accent-lr)}
+  .card .cta:hover{text-decoration:underline}
+
+  /* approach */
+  .approach{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px}
+  .approach h4{font-size:16px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+  .approach .num{font-family:var(--mono);font-size:12px;color:var(--text-dim)}
+  .approach p{color:var(--text-dim);font-size:15px}
+
+  /* footer */
+  footer{padding:56px 0;color:var(--text-dim);font-size:14px}
+  .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+  .foot a{color:var(--text)}
+  .foot a:hover{text-decoration:underline}
+
+  @media(max-width:640px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 96 96"><rect x="1" y="1" width="94" height="94" rx="20" fill="#171B21" stroke="#2A313B" stroke-width="2"/><g stroke="#E5E7EB" stroke-width="6" fill="none" stroke-linecap="round"><line x1="30" y1="30" x2="70" y2="30"/><line x1="30" y1="48" x2="58" y2="48" opacity="0.75"/><line x1="30" y1="66" x2="70" y2="66"/></g><circle cx="70" cy="48" r="4" fill="#10B981"/></svg>
+      EFFECTE&nbsp;SA
+    </a>
+    <div class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="kicker">Swiss industrial software</div>
+    <h1>Focused software for operations that <span class="dim">can't afford friction.</span></h1>
+    <p>Effecte SA builds narrow, deep products for industrial and B2B teams — quoting, quality, pipeline. One job each. Done properly.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#products">See the products</a>
+      <a class="btn btn-ghost" href="#contact">Talk to us</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="products">
+  <div class="wrap">
+    <h2>Three products. One standard.</h2>
+    <p class="sub">Each product owns a single operational problem end-to-end, ships fast, and stays out of your way.</p>
+    <div class="products">
+
+      <a class="card rm" href="https://www.rapidmech.it" target="_blank" rel="noopener">
+        <svg viewBox="0 0 96 96"><rect x="1" y="1" width="94" height="94" rx="20" fill="#171B21" stroke="#2A313B" stroke-width="2"/><g stroke="#F59E0B" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M 30 26 L 52 48 L 30 70"/><path d="M 48 26 L 70 48 L 48 70" opacity="0.5"/></g><circle cx="26" cy="48" r="4" fill="#E5E7EB"/></svg>
+        <h3>RapidMech <span class="tag">CNC quoting</span></h3>
+        <div class="domain">rapidmech.it</div>
+        <p>Turns technical drawings into structured CNC quotes in under a minute — itemized by phase, consistent across operators, archived by morphological similarity.</p>
+        <span class="cta">Visit RapidMech →</span>
+      </a>
+
+      <a class="card li" href="https://www.lisca.app" target="_blank" rel="noopener">
+        <svg viewBox="0 0 96 96"><rect x="1" y="1" width="94" height="94" rx="20" fill="#171B21" stroke="#2A313B" stroke-width="2"/><g stroke="#3B82F6" stroke-width="6" fill="none" stroke-linecap="round"><line x1="22" y1="48" x2="74" y2="48"/><line x1="34" y1="48" x2="46" y2="32" opacity="0.85"/><line x1="34" y1="48" x2="46" y2="64" opacity="0.85"/><line x1="50" y1="48" x2="62" y2="32" opacity="0.6"/><line x1="50" y1="48" x2="62" y2="64" opacity="0.6"/></g><circle cx="74" cy="48" r="6" fill="#3B82F6"/><circle cx="22" cy="48" r="4" fill="#E5E7EB"/></svg>
+        <h3>Lisca <span class="tag">Quality / ISO 9001</span></h3>
+        <div class="domain">lisca.app</div>
+        <p>A cloud non-conformity register for ISO 9001 teams. Guided root-cause analysis with Fishbone and 5-Why, automatic deadlines, audit-ready exports.</p>
+        <span class="cta">Visit Lisca →</span>
+      </a>
+
+      <div class="card lr">
+        <svg viewBox="0 0 96 96"><rect x="1" y="1" width="94" height="94" rx="20" fill="#171B21" stroke="#2A313B" stroke-width="2"/><g stroke="#10B981" stroke-width="6" fill="none" stroke-linecap="round"><path d="M 24 58 A 14 14 0 0 1 38 72" opacity="0.45"/><path d="M 24 44 A 28 28 0 0 1 52 72" opacity="0.7"/><path d="M 24 30 A 42 42 0 0 1 66 72"/></g><line x1="24" y1="72" x2="57" y2="39" stroke="#10B981" stroke-width="4" stroke-linecap="round" opacity="0.35"/><circle cx="48" cy="48" r="6" fill="#10B981"/><circle cx="24" cy="72" r="4" fill="#E5E7EB"/></svg>
+        <h3>Lead Radar <span class="tag">White-label</span></h3>
+        <div class="domain">lead intelligence</div>
+        <p>B2B lead intelligence for advisory and sales networks. Detects, scores and routes qualified prospects — deployable under your own brand, run by our engine.</p>
+        <span class="cta">Request access →</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="wrap">
+    <h2>How we build</h2>
+    <p class="sub">The same engineering discipline behind every product in the family.</p>
+    <div class="approach">
+      <div>
+        <h4><span class="num">01</span> One problem per product</h4>
+        <p>No platforms, no suites. Each product does one operational job completely, so it deploys in days — not quarters.</p>
+      </div>
+      <div>
+        <h4><span class="num">02</span> Method encoded, not enforced</h4>
+        <p>We encode proven methodology — costing logic, Ishikawa, lead scoring — into the workflow, while people keep the final decision.</p>
+      </div>
+      <div>
+        <h4><span class="num">03</span> Your data stays yours</h4>
+        <p>Swiss governance, strict data separation, exports on demand. Every product is built to pass an audit, including ours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap foot">
+    <div>
+      <strong style="color:var(--text)">Effecte SA</strong> — Switzerland<br>
+      Industrial software, built to ship.
+    </div>
+    <div>
+      <a href="mailto:info@effectesa.com">info@effectesa.com</a><br>
+      <span style="font-family:var(--mono);font-size:12px">© 2026 Effecte SA. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

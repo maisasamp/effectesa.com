@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <!-- Lisca — Effecte SA product mark system -->
+  <rect x="1" y="1" width="94" height="94" rx="20" fill="#171B21" stroke="#2A313B" stroke-width="2"/>
+  <g stroke="#3B82F6" stroke-width="6" fill="none" stroke-linecap="round">
+    <!-- fishbone / Ishikawa spine -->
+    <line x1="22" y1="48" x2="74" y2="48"/>
+    <line x1="34" y1="48" x2="46" y2="32" opacity="0.85"/>
+    <line x1="34" y1="48" x2="46" y2="64" opacity="0.85"/>
+    <line x1="50" y1="48" x2="62" y2="32" opacity="0.6"/>
+    <line x1="50" y1="48" x2="62" y2="64" opacity="0.6"/>
+  </g>
+  <circle cx="74" cy="48" r="6" fill="#3B82F6"/>
+  <circle cx="22" cy="48" r="4" fill="#E5E7EB"/>
+</svg>

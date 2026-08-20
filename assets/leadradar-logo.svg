@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <!-- Lead Radar — Effecte SA product mark system -->
+  <rect x="1" y="1" width="94" height="94" rx="20" fill="#171B21" stroke="#2A313B" stroke-width="2"/>
+  <g stroke="#10B981" stroke-width="6" fill="none" stroke-linecap="round">
+    <!-- radar arcs sweeping from bottom-left -->
+    <path d="M 24 58 A 14 14 0 0 1 38 72" opacity="0.45"/>
+    <path d="M 24 44 A 28 28 0 0 1 52 72" opacity="0.7"/>
+    <path d="M 24 30 A 42 42 0 0 1 66 72"/>
+  </g>
+  <!-- sweep beam -->
+  <line x1="24" y1="72" x2="57" y2="39" stroke="#10B981" stroke-width="4" stroke-linecap="round" opacity="0.35"/>
+  <!-- lead blip -->
+  <circle cx="48" cy="48" r="6" fill="#10B981"/>
+  <circle cx="24" cy="72" r="4" fill="#E5E7EB"/>
+</svg>
