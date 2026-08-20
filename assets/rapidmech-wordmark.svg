@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 110" width="960" height="110">
+  <!-- RapidMech wordmark: steel-blue caps + fading speed bars -->
+  <text x="0" y="88" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="700" font-size="92" letter-spacing="10" fill="#5B8DC6" textLength="640" lengthAdjust="spacingAndGlyphs">RAPIDMECH</text>
+  <g>
+    <rect x="668" y="12" width="15" height="80" fill="#5B8DC6"/>
+    <rect x="702" y="12" width="15" height="80" fill="#5B8DC6"/>
+    <rect x="736" y="12" width="15" height="80" fill="#5B8DC6"/>
+    <rect x="770" y="12" width="15" height="80" fill="#54809F"/>
+    <rect x="804" y="12" width="15" height="80" fill="#476A88"/>
+    <rect x="838" y="12" width="15" height="80" fill="#3A536C"/>
+    <rect x="872" y="12" width="15" height="80" fill="#2E4152"/>
+    <rect x="906" y="12" width="15" height="80" fill="#24313E"/>
+  </g>
+</svg>

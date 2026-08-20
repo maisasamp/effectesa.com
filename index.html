@@ -60,7 +60,9 @@
   .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
   .card{background:var(--bg-raised);border:1px solid var(--line);border-radius:14px;padding:32px 28px;display:flex;flex-direction:column;transition:border-color .2s}
   .card:hover{border-color:#3d4654}
-  .card svg{width:56px;height:56px;margin-bottom:22px}
+  .card .logo{height:56px;display:flex;align-items:center;margin-bottom:22px}
+  .card .logo .badge{width:56px;height:56px}
+  .card .logo .wordmark{width:100%;max-width:250px;height:auto}
   .card h3{font-size:20px;font-weight:700;display:flex;align-items:center;gap:10px}
   .tag{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:1px solid var(--line);color:var(--text-dim)}
   .card .domain{font-family:var(--mono);font-size:12px;margin-top:6px}
@@ -123,7 +125,7 @@
     <div class="products">
 
       <a class="card rm" href="https://www.rapidmech.it" target="_blank" rel="noopener">
-        <svg viewBox="0 0 96 96"><rect x="1" y="1" width="94" height="94" rx="20" fill="#171B21" stroke="#2A313B" stroke-width="2"/><g stroke="#F59E0B" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M 30 26 L 52 48 L 30 70"/><path d="M 48 26 L 70 48 L 48 70" opacity="0.5"/></g><circle cx="26" cy="48" r="4" fill="#E5E7EB"/></svg>
+        <div class="logo"><svg class="wordmark" viewBox="0 0 960 110"><text x="0" y="88" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="700" font-size="92" letter-spacing="10" fill="#5B8DC6" textLength="640" lengthAdjust="spacingAndGlyphs">RAPIDMECH</text><g><rect x="668" y="12" width="15" height="80" fill="#5B8DC6"/><rect x="702" y="12" width="15" height="80" fill="#5B8DC6"/><rect x="736" y="12" width="15" height="80" fill="#5B8DC6"/><rect x="770" y="12" width="15" height="80" fill="#54809F"/><rect x="804" y="12" width="15" height="80" fill="#476A88"/><rect x="838" y="12" width="15" height="80" fill="#3A536C"/><rect x="872" y="12" width="15" height="80" fill="#2E4152"/><rect x="906" y="12" width="15" height="80" fill="#24313E"/></g></svg></div>
         <h3>RapidMech <span class="tag">CNC quoting</span></h3>
         <div class="domain">rapidmech.it</div>
         <p>Turns technical drawings into structured CNC quotes in under a minute — itemized by phase, consistent across operators, archived by morphological similarity.</p>
@@ -131,20 +133,20 @@
       </a>
 
       <a class="card li" href="https://www.lisca.app" target="_blank" rel="noopener">
-        <svg viewBox="0 0 96 96"><rect x="1" y="1" width="94" height="94" rx="20" fill="#171B21" stroke="#2A313B" stroke-width="2"/><g stroke="#3B82F6" stroke-width="6" fill="none" stroke-linecap="round"><line x1="22" y1="48" x2="74" y2="48"/><line x1="34" y1="48" x2="46" y2="32" opacity="0.85"/><line x1="34" y1="48" x2="46" y2="64" opacity="0.85"/><line x1="50" y1="48" x2="62" y2="32" opacity="0.6"/><line x1="50" y1="48" x2="62" y2="64" opacity="0.6"/></g><circle cx="74" cy="48" r="6" fill="#3B82F6"/><circle cx="22" cy="48" r="4" fill="#E5E7EB"/></svg>
+        <div class="logo"><svg class="wordmark" style="max-width:170px" viewBox="0 0 430 120"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2A93B"/><stop offset="1" stop-color="#C6502E"/></linearGradient></defs><g stroke="url(#lg)" stroke-width="7" fill="none" stroke-linecap="round"><line x1="8" y1="60" x2="138" y2="60"/><line x1="52" y1="60" x2="76" y2="26"/><line x1="52" y1="60" x2="76" y2="94"/><line x1="78" y1="60" x2="102" y2="26"/><line x1="78" y1="60" x2="102" y2="94"/><line x1="104" y1="60" x2="121" y2="36"/><line x1="104" y1="60" x2="121" y2="84"/></g><rect x="134" y="44" width="12" height="32" rx="5" fill="url(#lg)"/><text x="172" y="88" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="800" font-size="82" letter-spacing="1" fill="#E7E2DA">lisca</text><circle cx="366" cy="82" r="9" fill="#E58133"/></svg></div>
         <h3>Lisca <span class="tag">Quality / ISO 9001</span></h3>
         <div class="domain">lisca.app</div>
         <p>A cloud non-conformity register for ISO 9001 teams. Guided root-cause analysis with Fishbone and 5-Why, automatic deadlines, audit-ready exports.</p>
         <span class="cta">Visit Lisca →</span>
       </a>
 
-      <div class="card lr">
-        <svg viewBox="0 0 96 96"><rect x="1" y="1" width="94" height="94" rx="20" fill="#171B21" stroke="#2A313B" stroke-width="2"/><g stroke="#10B981" stroke-width="6" fill="none" stroke-linecap="round"><path d="M 24 58 A 14 14 0 0 1 38 72" opacity="0.45"/><path d="M 24 44 A 28 28 0 0 1 52 72" opacity="0.7"/><path d="M 24 30 A 42 42 0 0 1 66 72"/></g><line x1="24" y1="72" x2="57" y2="39" stroke="#10B981" stroke-width="4" stroke-linecap="round" opacity="0.35"/><circle cx="48" cy="48" r="6" fill="#10B981"/><circle cx="24" cy="72" r="4" fill="#E5E7EB"/></svg>
+      <a class="card lr" href="leadradar.html">
+        <div class="logo"><svg class="badge" viewBox="0 0 96 96"><rect x="1" y="1" width="94" height="94" rx="20" fill="#171B21" stroke="#2A313B" stroke-width="2"/><g stroke="#10B981" stroke-width="6" fill="none" stroke-linecap="round"><path d="M 24 58 A 14 14 0 0 1 38 72" opacity="0.45"/><path d="M 24 44 A 28 28 0 0 1 52 72" opacity="0.7"/><path d="M 24 30 A 42 42 0 0 1 66 72"/></g><line x1="24" y1="72" x2="57" y2="39" stroke="#10B981" stroke-width="4" stroke-linecap="round" opacity="0.35"/><circle cx="48" cy="48" r="6" fill="#10B981"/><circle cx="24" cy="72" r="4" fill="#E5E7EB"/></svg></div>
         <h3>Lead Radar <span class="tag">White-label</span></h3>
         <div class="domain">lead intelligence</div>
         <p>B2B lead intelligence for advisory and sales networks. Detects, scores and routes qualified prospects — deployable under your own brand, run by our engine.</p>
-        <span class="cta">Request access →</span>
-      </div>
+        <span class="cta">User access →</span>
+      </a>
 
     </div>
   </div>
