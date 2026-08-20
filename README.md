@@ -1,19 +1,20 @@
 # effectesa.com
 
-One-pager for **Effecte SA** — Swiss industrial software company.
+One-pager for **Effecte SA** — industrial software company.
 
 ## Products
 
 | Product | Domain | Accent | Status |
 |---|---|---|---|
-| RapidMech | rapidmech.it | amber `#F59E0B` | live |
-| Lisca | lisca.app | blue `#3B82F6` | live |
-| Lead Radar | — | green `#10B981` | logo only, page TBD |
+| RapidMech | rapidmech.it | steel blue `#5B8DC6` | live |
+| Lisca | lisca.app | orange `#E58133` | live |
+| Lead Radar | — | green `#10B981` | user-access page (`leadradar.html`) |
 
 ## Structure
 
 - `index.html` — self-contained one-pager (all CSS inline, SVG logos inline). English, dark industrial theme.
-- `assets/` — standalone SVG logo files for the mark family (Effecte parent mark + 3 product marks, shared geometric system: dark rounded square, 6px strokes, product accent color, steel origin dot).
+- `leadradar.html` — Lead Radar user-access page (static sign-in placeholder).
+- `assets/` — official RapidMech wordmark (SVG), official Lisca logo (PNG, transparent), Lead Radar badge + Effecte parent mark (SVG).
 
 ## Design tokens
 
