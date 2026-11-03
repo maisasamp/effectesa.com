@@ -8,13 +8,18 @@ One-pager for **Effecte SA** — industrial software company.
 |---|---|---|---|
 | RapidMech | rapidmech.it | steel blue `#5B8DC6` | live |
 | Lisca | lisca.app | orange `#E58133` | live |
-| Lead Radar | — | green `#10B981` | user-access page (`leadradar.html`) |
+
+## Services
+
+| Service | Domain | Accent | Notes |
+|---|---|---|---|
+| Orbitale | orbitale.app | blue `#5B8CF2` / amber `#F59E0B` | human-supervised service, own section on the page |
 
 ## Structure
 
 - `index.html` — self-contained one-pager (all CSS inline, SVG logos inline). English, dark industrial theme.
-- `leadradar.html` — Lead Radar user-access page (static sign-in placeholder).
-- `assets/` — official RapidMech wordmark (SVG), official Lisca logo (PNG, transparent), Lead Radar badge + Effecte parent mark (SVG).
+- `leadradar.html` — legacy URL, kept only as a noindex redirect to https://orbitale.app.
+- `assets/` — official RapidMech wordmark (SVG), official Lisca logo (PNG, transparent), Effecte marks (SVG).
 
 ## Design tokens
 
@@ -24,4 +29,4 @@ One-pager for **Effecte SA** — industrial software company.
 
 ## Deploy
 
-Static site — works on GitHub Pages, Netlify, Cloudflare Pages. No build step.
+Static site served by Caddy on the Hetzner server (`/home/deploy/effectesa.com`, `git pull` after push). No build step.
